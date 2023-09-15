@@ -3,7 +3,7 @@
     left: 0%;
     width: 100%;
     position: absolute;
-    border: 1px solid black;
+    padding-top: 1%;
 }
 
 .web_name{
@@ -14,10 +14,35 @@
 
 .head_sq{
     font-size: 30px;
-    margin-left: 5px;
+    margin-left: 10px;
     margin-top: 5px;
 }
 
 .content{
-    background-color: rgb(149, 212, 223);
+    padding-top: 5%;
+    position: relative;
+}
+
+.intro{
+    font-style: italic;
+    font-size: large;
+}
+
+.day{
+    font-weight: bold;
+}
+
+.footer{
+    bottom: 0;
+    position: absolute;
+    display: inline;
+}
+
+.footer > p{
+    margin: 0;
+    padding: 0;
+}
+
+.html_b{
+    font-weight: bold;
 }
