@@ -4,11 +4,12 @@
     width: 100%;
     position: absolute;
     text-align: center;
-    margin-top: 1%;
+    margin-top: .5%;
 }
 
 .header > h1{
     font-size: large;
+    text-transform: uppercase;
 }
 
 .header > h2{
@@ -27,8 +28,56 @@
 
 .XXL{
     font-size: xx-large;
+    text-transform: capitalize;
 }
 
 .smaller{
     font-size: small;
+}
+
+.header > hr{
+    margin-top: 1.5%;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 15% 0 5%;
+    line-height: 4;
+}
+
+.left{
+    margin-top: 8%;
+}
+
+.right{
+    margin-top: 8%;
+}
+
+.updated, .company, .questions{
+    font-size: x-small;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    color: rgb(7, 7, 122);
+}
+
+.company{
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.company > hr{
+    margin: 1% 0 1% 0;
+}
+
+.sec_half{
+    display: inline;
+}
+
+.questions{
+    margin: 1.5% 0 1.5% 0;
 }
