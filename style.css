@@ -56,8 +56,8 @@
     margin-top: 8%;
 }
 
-.updated, .company, .questions{
-    font-size: x-small;
+.updated, .company, .questions, .footer{
+    font-size: small;
     margin: 0;
     padding: 0;
     line-height: 0;
@@ -80,4 +80,20 @@
 
 .questions{
     margin: 1.5% 0 1.5% 0;
+}
+
+.questions > hr{
+    margin-top: 1%;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.caps{
+    text-transform: uppercase;
+}
+
+.copy{
+    margin-top: 1.5%;
 }
