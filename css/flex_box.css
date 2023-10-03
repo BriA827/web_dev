@@ -44,13 +44,12 @@
 }
 
 .p_3{
-    display: flex;
+    display: block;
 }
 
 .cont{
-    background-color: blueviolet;
     font-size: xx-large;
-    width: 2%;
+    width: 3%;
     text-align: center;
     margin: 1%;
     padding-top: 2%;
@@ -59,10 +58,104 @@
 .t1{
     border: 3px solid black;
     display: flex;
-    width: 100%;
     justify-content: space-between;
+    padding: .5%;
+}
+
+.t1c{
+    background-color: red;
+    padding: 1.5% 0;
 }
 
 .t2{
-    justify-content: space-around;
+    border: 3px solid red;
+    width: 8%;
+    display: flex;
+    justify-content: center;
+    margin: .5%;
+}
+
+.t2c{
+    background-color:rgb(145, 119, 98);
+    width: 40%;
+    margin: 3%;
+}
+
+.t3c{
+    background-color:yellowgreen;
+    width: 40%;
+    margin: 3%;
+}
+
+.m1{
+    border: 3px solid red;
+    display: flex;
+    width: 45%;
+    margin: .1% 25%;
+    justify-content: space-evenly;
+    padding: 1%;
+}
+
+.m2, .m3{
+    border: 3px solid red;
+    display: flex;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 0;
+}
+
+.m4c, .m5c, .m6c, .m7c{
+    width: 80%;
+    margin: 2% 10%;
+    padding: 10% 0;
+}
+
+.m4c{
+    background-color: teal;
+}
+
+.m5c{
+    background-color: plum;
+}
+
+.m6c{
+    background-color: red;
+}
+
+.m7c{
+    background-color: grey;
+}
+
+.b1{
+    border: 3px solid red;
+    display: flex;
+    justify-content: center;
+    padding: 1% 0;
+}
+
+.b8c{
+    background-color: green;
+}
+
+.b2{
+    border: 3px solid red;
+    display: flex;
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.b9c, .b10c{
+    width: 80%;
+    margin: 2% 10%;
+    height: 100%;
+}
+
+.b9c{
+    background-color: magenta;
+}
+
+.b10c{
+    background-color: grey;
 }
