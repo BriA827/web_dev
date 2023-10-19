@@ -47,6 +47,7 @@ header{
 }
 
 .project{
+    border: 1px solid transparent;
     width: 100%;
     text-decoration: none;
     color: rgb(255, 239, 91);
