@@ -21,7 +21,7 @@ header{
 }
 
 .user{
-    width: 15%;
+    width: 13.3%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,6 +37,7 @@ header{
     list-style-type: none;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .project:hover{
@@ -46,9 +47,12 @@ header{
 }
 
 .project{
+    width: 100%;
     text-decoration: none;
     color: rgb(255, 239, 91);
     font-size: larger;
+    background: rgb(142, 100, 190);
+    padding: 5%;
 }
 
 main{
@@ -58,7 +62,7 @@ main{
 }
 
 .main_title{
-    margin: 0 2%;
+    margin: 3% 2% 0 2%;
     color: rgb(255, 255, 255);
 }
 
