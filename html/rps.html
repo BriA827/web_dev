@@ -24,6 +24,12 @@
     </header>
     <main>
         <h1>Rock, Paper, Scissors</h1>
+        <div class="intro">
+            <p class="rounds">How many rounds would you like to play?</p>
+            <input type="text" class="round">
+            <button id="submit">Submit</button>
+        </div>
+
         <div class="choice-container">
             <div class="user-frame">
                 <h2>User Choice</h2>
@@ -34,6 +40,10 @@
                 <img src="../images/rps4.png" class='comp-img' alt="rps">
             </div>
         </div>
+
+        <div class="scores">
+            <p><span class="player_score">0</span>:<span class="comp_score">0</span></p>
+        </div>
         
         <h2>Result: <span class="result">Start Game</span></h2>
 
@@ -41,6 +51,14 @@
             <button id="rock">Rock</button>
             <button id="paper">Paper</button>
             <button id="scissors">Scissors</button>
+        </div>
+        <div class="end-game">
+            <ul class="end-list">
+                <p class="fraction"><span class="scoreU">num</span>/5 Points</p>
+                <p class="winT end-text">You won! Play again?</p>
+                <p class="loseT end-text">You Lost! Try again?</p>
+                <button id="restart">Restart</button>
+            </ul>
         </div>
     </main>
 
