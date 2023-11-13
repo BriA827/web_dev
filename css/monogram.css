@@ -1,4 +1,58 @@
 .company{
     text-transform: uppercase;
     color: rgb(236, 204, 162);
+    /* clamp(min grow max) */
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+}
+
+.hero{
+    height: 50rem;
+    background-image: url(../images/console.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid transparent;
+}
+
+header{
+    width: 90%;
+    max-width: 1800px;
+    margin: 2em auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a2456;
+    font-family: sans-serif;
+}
+
+.headL{
+    margin: 0 1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav{
+    margin: 0 1%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(236, 204, 162);
+    font-size: clamp(.3rem, 3.5vw, 1.2rem);
+}
+
+.heroC{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: rgb(236, 204, 162);
 }
