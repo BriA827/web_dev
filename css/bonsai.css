@@ -1,0 +1,91 @@
+.logo{
+    color: #00b289;
+    font-family: "Comic Sans MS";
+}
+
+.pap{
+    font-family: 'Cinzel', serif;
+    font-family: 'Courier Prime', monospace;
+}
+
+.table{
+    color: #00b289;
+}
+
+.bonsai{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: clamp(2rem, 3vw, 2rem);
+}
+
+.nav_butt, .close_butt{
+    font-size: clamp(2rem, 3vw, 5rem);
+    color: grey;
+}
+
+.nav_row{
+    display: none;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (min-width: 700px){
+    .nav_butt{
+        display: none;
+    }
+    .nav_row{
+        display: flex;
+    }
+}
+
+.nav_dropdown{
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.d_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid black;
+    width: 90%;
+    margin: 0;
+}
+
+.nav_dropdown > .d_top> .table{
+    font-size: xx-large;
+    padding: 2% 0 0 11%;
+}
+
+.close_butt{
+    padding: 7% 11% 0 0;
+}
+
+.nav_row > ul> li{
+    list-style-type: none;
+}
+.nav_row >ul{
+    display: flex;
+    flex: row;
+    justify-content: space-around;
+}
+
+.nav_row{
+    display: none;
+    flex: row;
+    justify-content: center;
+    align-items: center;
+}
