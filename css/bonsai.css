@@ -3,11 +3,6 @@
     font-family: "Comic Sans MS";
 }
 
-.pap{
-    font-family: 'Cinzel', serif;
-    font-family: 'Courier Prime', monospace;
-}
-
 .table{
     color: #00b289;
 }
@@ -45,7 +40,7 @@ header{
 }
 
 .nav_dropdown{
-    display: flex;
+    display: none;
     flex-direction: column;
     position: sticky;
     background-color: white;
@@ -60,23 +55,19 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid black;
     width: 90%;
     margin: 0;
 }
 
 .nav_dropdown > .d_top> .table{
-    font-size: xx-large;
-    padding: 2% 0 0 11%;
+    font-size: 40px;
+    padding: 10% 0 0 15%;
 }
 
 .close_butt{
-    padding: 7% 11% 0 0;
+    padding: 10% 11% 0 0;
 }
 
-.nav_row > ul> li{
-    list-style-type: none;
-}
 .nav_row >ul{
     display: flex;
     flex: row;
@@ -88,4 +79,166 @@ header{
     flex: row;
     justify-content: center;
     align-items: center;
+}
+
+.nav_dropdown > ul > li{
+    font-size: x-large;
+    color: rgb(51, 47, 47);
+    padding: 7% 0 5% 0%;
+}
+
+.line{
+   height: 2px;
+   background-color: lightgrey;
+   width: 85%;
+   margin: 0%;
+}
+
+.d_bot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_p{
+    width: 80%;
+    font-size: larger;
+    padding: 2%;
+    border: 1px solid #00b289;
+    color: #00b289;
+    text-transform: uppercase;
+}
+
+.free_p{
+    margin-top: 5%;
+    width: 80%;
+    font-size: larger;
+    padding: 2%;
+    border: 1px solid #00b289;
+    background-color: #00b289;
+    text-transform: uppercase;
+    color: white;
+}
+
+.fa-check{
+    color: #00b289;
+    margin: 1% 2% 3% 0;
+}
+
+.pap{
+    font-family: 'Cinzel', serif;
+    font-family: 'Courier Prime', monospace;
+    text-transform: capitalize;
+    font-size: x-large;
+    color: rgb(51, 47, 47);
+    margin-left: 6%;
+}
+
+.switch{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin-left: 17%;
+    font-size: large;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.monthly{
+    color: rgb(29, 27, 27);
+}
+
+.yearly{
+    color: rgb(94, 89, 89);
+}
+
+.slider{
+    background-color: #00b289;
+    border-radius: 40%;
+    padding: 10px;
+    width: 40px;
+    border: none;
+}
+
+.starter, .professional, .business{
+    border: 2px solid lightgrey;
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
+    padding-left: 3%;
+}
+
+.pack{
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: rgb(51, 47, 47);
+}
+
+li{
+    list-style-type: none;
+}
+
+.ideal{
+    color: rgb(51, 47, 47);
+    font-size: larger;
+    margin: 1% 0 0 0;
+}
+
+.dollar{
+    width: 90%;
+    align-self: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.change, .changed{
+    font-size: 70px;
+    color: rgb(51, 47, 47);
+    padding: 0 5%;
+}
+
+.g_line{
+   height: 2px;
+   background-color:#00b289;
+   width: 85%;
+   align-self: center;
+}
+
+.starter > ul, .professional > ul, .business > ul{
+    padding: 1% 0;
+    margin-left: 4%;
+    text-transform: capitalize;
+}
+
+.start{
+    text-transform: uppercase;
+    color: white;
+    background-color: #00b289;
+    border: none;
+    align-self: center;
+    margin-bottom: 5%;
+    width: 90%;
+    padding: 5%;
+    font-size: larger;
+}
+
+.year{
+    display: none;
+    color: rgb(94, 89, 89);
+    margin: 0 0 1% 70%;
+}
+
+.add_text{
+    font-size: x-large;
+    margin-left: 4%;
+}
+
+.three_boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
