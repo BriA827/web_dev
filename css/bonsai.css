@@ -194,7 +194,7 @@ li{
     margin: 0;
 }
 
-.change, .changed{
+.change{
     font-size: 70px;
     color: rgb(51, 47, 47);
     padding: 0 5%;
@@ -233,7 +233,6 @@ li{
 
 .add_text{
     font-size: x-large;
-    margin-left: 4%;
 }
 
 .three_boxes{
@@ -241,4 +240,127 @@ li{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.adds{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.add_ons{
+    margin: 8% 8% 0 8%;
+}
+
+.add{
+    margin-bottom: 20%;
+}
+
+.cost{
+    display: flex;
+    flex-direction: column;
+    font-size: xx-large;
+    margin: 0% 0% 5% 0%;
+    font-weight: bold;
+    color: rgb(29, 27, 27);
+}
+
+.title_add, .add_desc, .per{
+    margin: 0%;
+}
+
+.per{
+    text-transform: uppercase;
+    font-size: medium;
+    color: rgb(94, 89, 89);
+    font-weight: lighter;
+}
+
+.title_add{
+    text-transform: capitalize;
+    margin-bottom: 1%;
+    font-weight: bold;
+    color: rgb(29, 27, 27);
+}
+
+.add_desc{
+    color: rgb(94, 89, 89);
+}
+
+.learn{
+    display: block;
+    margin-top: 3%;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #00b289;
+}
+
+.start_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(2.5rem, 3.5vw, 3rem);
+    margin-bottom: 10%;
+}
+
+.business_text{
+    text-align: center;
+    margin: 0%;
+}
+
+.green_text{
+    color: #00b289;
+}
+
+.next_line{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+}
+
+.start_free{
+    border: none;
+    background-color: #00b289;
+    padding: 3% 7%;
+    border-radius: 5%;
+    color: white;
+    text-transform: uppercase;
+}
+
+.faq{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.faq_text{
+    text-transform: capitalize;
+    margin: 0 0 3% 0;
+    color: #00b289;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.faq > ul{
+    margin: 0% 4% 0 0;
+}
+
+.faq > ul > li{
+    display: flex;
+    justify-content: space-between;
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 6%;
+}
+
+.faq_info{
+    display: none;
+}
+
+.fa-angle-down{
+    color: rgb(94, 89, 89);
 }
