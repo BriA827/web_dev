@@ -14,33 +14,89 @@ const startCost = document.querySelector(".scost")
 const proCost = document.querySelector(".pcost")
 const busiCost = document.querySelector(".bcost")
 
-const info1 = document.querySelector("info1")
-const info2 = document.querySelector("info2")
-const info3 = document.querySelector("info3")
-const info4 = document.querySelector("info4")
+const info1 = document.querySelector(".info1")
+const info2 = document.querySelector(".info2")
+const info3 = document.querySelector(".info3")
+const info4 = document.querySelector(".info4")
 
 const an1 = document.querySelector(".an1")
 const an2 = document.querySelector(".an2")
 const an3 = document.querySelector(".an3")
 const an4 = document.querySelector(".an4")
 
+const faq1 = document.querySelector(".faq1")
+const faq2 = document.querySelector(".faq2")
+const faq3 = document.querySelector(".faq3")
+const faq4 = document.querySelector(".faq4")
+
 let isOpen = false
 let yearly = false
 
-function faq_drop() {
-    
-}
+let an1Open = false
+let an2Open = false
+let an3Open = false
+let an4Open = false
+
+an1.addEventListener("click", () => {
+    if (an1Open == false){
+        info1.style.display = "flex"
+        an1Open = true
+        faq1.style.color = "#00b289"
+    }
+    else{
+        info1.style.display = "none"
+        an1Open = false
+        faq1.style.color = "rgb(29, 27, 27)"
+    }
+})
+
+an2.addEventListener("click", () => {
+    if (an2Open == false){
+        info2.style.display = "flex"
+        an2Open = true
+        faq2.style.color = "#00b289"
+    }
+    else{
+        info2.style.display = "none"
+        an2Open = false
+        faq2.style.color = "rgb(29, 27, 27)"
+    }
+})
+
+an3.addEventListener("click", () => {
+    if (an3Open == false){
+        info3.style.display = "flex"
+        an3Open = true
+        faq3.style.color = "#00b289"
+    }
+    else{
+        info3.style.display = "none"
+        an3Open = false
+        faq3.style.color = "rgb(29, 27, 27)"
+    }
+})
+
+an4.addEventListener("click", () => {
+    if (an4Open == false){
+        info4.style.display = "flex"
+        an4Open = true
+        faq4.style.color = "#00b289"
+    }
+    else{
+        info4.style.display = "none"
+        an4Open = false
+        faq4.style.color = "rgb(29, 27, 27)"
+    }
+})
 
 navButt.addEventListener("click", () => {
     navDrop.style.display = "flex"
     isOpen = true
-    console.log("open")
 })
 
 closeButt.addEventListener("click", () => {
     navDrop.style.display = "none"
     isOpen = false
-    console.log("close")
 })
 
 slider.addEventListener("click", () => {
