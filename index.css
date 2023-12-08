@@ -57,18 +57,14 @@ header{
 }
 
 main{
-    margin: 0 1%;
-    padding: 2% 1%;
+    margin: 0;
+    padding: 5% 3.3%;
     color: rgb(222, 219, 250);
 }
 
 .main_title{
     margin: 3% 2% 0 2%;
     color: rgb(255, 255, 255);
-}
-
-.sample{
-    padding: 1% 0;
 }
 
 .contact{
@@ -115,4 +111,9 @@ footer{
     width: 50%;
     display: flex;
     justify-content: space-evenly;
+}
+
+form{
+    width: 90%;
+    margin: 4em auto;
 }
