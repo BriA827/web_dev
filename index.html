@@ -29,8 +29,10 @@
                 <p class="form_text p2">Current Address</p>
                 <p class="form_text p3">Email Address <span class="asterisk">*</span></p>
                 <p class="form_text p4">Phone Number</p>
-                <p class="form_text p5">Upload Resume <span class="asterisk">*</span></p>
-                <p class="form_text p6">Take Photo</p>
+                <p class="form_text p5">Applying for Position <span class="asterisk">*</span></p>
+                <p class="form_text p6">Start date</p>
+                <p class="form_text p7">Upload Resume <span class="asterisk">*</span></p>
+                <p class="form_text p8">Take Photo</p>
             </div>
             <form>
                 <div class="name">
@@ -63,7 +65,7 @@
 
                         <input type="text" id="postal">
                         <select name="country" id="country">
-                            <option value="default">Please Select</option>
+                            <option value="">Please Select</option>
                             <option value="america">America</option>
                             <option value="canada">Canada</option>
                             <option value="zimbabwe">Zimbabwe</option>
@@ -76,21 +78,20 @@
                 </div>
                 
                 <div class="emailadd">
-                    <input type="email" id="email" placeholder="ex: myname@example.com">
+                    <input type="email" id="email" placeholder="ex: myname@example.com" required>
                 </div>
 
                 <div class="phone">
                     <input type="tel" id="area_code">
-                    <label for="area_code">Area Code</label>
                     <p class="dash">-</p>
                     <input type="tel" id="phone_number">
+                    <label for="area_code" class="text1">Area Code</label>
                     <label for="phone_number">Phone Number</label>
                 </div>
 
                 <div class="apply">
-                    <p class="form_text">Applying for Position<span class="asterisk">*</span></p>
-                    <select name="position" id="position">
-                        <option value="default">Please Select</option>
+                    <select name="position" id="position" required>
+                        <option value="">Please Select</option>
                         <option value="u_dev">UI/UX Developer</option>
                         <option value="front_dev">Front-End Developer</option>
                         <option value="back_dev">Back-End Developer</option>
@@ -98,14 +99,12 @@
                 </div>
 
                 <div class="start">
-                    <p class="form_text">Start date</p>
                     <input type="date" id="date_start">
                     <label for="date_start">Date</label>
                 </div>
                 
                 <div class="resume">
-                    <input type="file" id="resume_file">
-                    <label for="resume_file">No file chosen</label>
+                    <input type="file" id="resume_file" required>
                 </div>
 
                 <div class="photo">
@@ -113,11 +112,11 @@
                 </div>
 
                 <div class="agree">
-                    <input type="checkbox">
-                    <p class="agreement">I agree to <span class="blue_text">terms & conditions.</span><span class="asterisk">*<span></span></p>
+                    <input type="checkbox" required>
+                    <p class="agreement">I agree to <span class="blue_text">terms & conditions. </span><span class="asterisk">*<span></span></p>
                 </div>
 
-                <input type="submit">
+                <input type="submit" id="submit">
             </form>
         </div>
     </main>
