@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.back{
+    border: 2px solid black;
+}
+
+.back_purp{
+    width: 100%;
+}
+
+.ans{
+    display: none;
+}
+
