@@ -101,17 +101,45 @@ h1{
     justify-content: center;
     align-items: center;
     margin: .5em 0;
+    position: relative;
 }
 
 .product > img{
     width: 60%;
     display: inline-block;
     aspect-ratio: 1/1;
+    cursor: pointer;
+}
+
+.pre-order-btn, .shop-btn{
+    text-transform: uppercase;
+    padding: .4rem .7rem;
+    font-size: .8rem;
+    font-weight: bold;
+    letter-spacing: .05rem;
+    cursor: pointer;
+}
+
+.pre-order-btn{
+    background-color: #ff8b68;
+    position: absolute;
+    top: 15px;
+    right: 159px;
+
+}
+
+.shop-btn{
+    background-color: #1a2456;
+    color: white;
+    border-radius: 20px;
+    display: none;
+    margin-top: .3rem;
 }
 
 .itemName{
     text-transform: uppercase;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .itemDiv{
@@ -119,11 +147,13 @@ h1{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 
 .itemDesc{
     width: 60%;
     margin: .25em 0;
+    cursor: pointer;
 }
 
 footer{
@@ -162,6 +192,13 @@ footer > div> a{
 @media (max-width: 700px){
     footer{
         flex-direction: column-reverse;
+    }
+    .pre-order-btn{
+        top: 10px;
+        right: 61px;
+    }
+    .shop-btn{
+        text-align: center;
     }
 }
 
