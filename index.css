@@ -21,15 +21,21 @@ header{
 }
 
 .user{
-    width: 13.3%;
+    width: 25%;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    padding-left: 2%;
+    font-size: clamp(1.5rem, 3vw, 1.7rem);
 }
 
 .i_user{
-    font-size: x-large;
+    font-size: clamp(1.5rem, 3vw, 1.7rem);
     padding: 0 4%;
+}
+
+.menu,.close,.info{
+    display: none;
 }
 
 .links{
@@ -286,4 +292,55 @@ form{
     margin: 5% 0 0 20%;
     width: 15%;
     padding: .5% 0;
+}
+
+.texts, .subhead, form{
+    font-size: clamp(.3rem, 3vw, 1rem);
+}
+
+@media (max-width: 700px){
+    .menu{
+        display: flex;
+        padding-right: 5%;
+    }
+    .user{
+        width: 110%;
+    }
+    .links{
+        display: none;
+    }
+    header{
+        height: 6vh;
+    }
+    main{
+        padding: 15% 4%;
+    }
+    input{
+        height: 15px;
+        width: 80px;
+        /* i hate forms */
+    }
+    .links{
+        background-color: rgb(142, 100, 190);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 99vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        padding-top: 15%;
+    }
+    li{
+        margin-top: 3%;
+    }
+    .info{
+        font-size: x-large;
+        font-weight: bold;
+        display: flex;
+    }
+    .close{
+        position: absolute;
+    }
 }
