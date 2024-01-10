@@ -1,16 +1,11 @@
 const menuBtn = document.querySelector(".menu")
-const linkDiv = document.querySelector(".links")
-
-menuOpen = false
+const linkDiv = document.querySelector(".hamburg")
+const xBtn = document.querySelector(".close")
 
 menuBtn.addEventListener("click", () => {
-    if (menuOpen == false){
-        menuOpen = true
-        linkDiv.style.display = "flex"
-    }
+    linkDiv.style.display = "flex"
+})
 
-    else{
-        menuOpen = false
-        linkDiv.style.display = "none"
-    }
+xBtn.addEventListener("click", () => {
+    linkDiv.style.display = "none"
 })

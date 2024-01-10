@@ -34,7 +34,7 @@ header{
     padding: 0 4%;
 }
 
-.menu,.close,.info{
+.menu,.close,.info,.hamburg{
     display: none;
 }
 
@@ -95,7 +95,7 @@ footer{
 .foot_l{
     display: flex;
     width: 25%;
-    font-size: large;
+    font-size: clamp(.6rem, 3vw, 1.1rem);
     align-items: center;
     font-weight: bold;
 }
@@ -107,6 +107,7 @@ footer{
 
 .foot_r{
   width: 20%;
+  font-size: clamp(.5rem, 3vw, 1rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -320,17 +321,19 @@ form{
         width: 80px;
         /* i hate forms */
     }
-    .links{
+    .hamburg{
+        width: 50%;
+        list-style-type: none;
         background-color: rgb(142, 100, 190);
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 99vh;
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: start;
-        padding-top: 15%;
+        align-items: center;
     }
     li{
         margin-top: 3%;
@@ -339,8 +342,27 @@ form{
         font-size: x-large;
         font-weight: bold;
         display: flex;
+        
+        padding-top: 6%;
     }
     .close{
-        position: absolute;
+        width: 80%;
+        justify-content: right;
+        display: flex;
+        font-size: x-large;
+        padding: 4% 0 0 88%;
+    }
+    footer{
+        justify-content: space-between;
+    }
+    .foot_l{
+        width: 40%;
+    }
+    .foot_r{
+        width: 55%;
+        justify-content: space-between;
+    }
+    .icons > a{
+        padding: 0 2%;
     }
 }
