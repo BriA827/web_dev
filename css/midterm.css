@@ -7,7 +7,6 @@
 
 body{
     background-color: #fafafa;
-    border: 1px solid black;
 }
 
 .heading{
@@ -36,7 +35,7 @@ h1{
 .subhead{
     margin-top: 4%;
     width: 89%;
-    font-size: clamp(1rem, 2vw, 3rem);
+    font-size: clamp(1rem, 2vw, 1.5rem);
     line-height: 150%;
     letter-spacing: 1px;
 }
@@ -81,4 +80,51 @@ p{
 
 .team-builder{
     display: none;
+}
+
+img{
+    width: 20%;
+    margin-left: 65%;
+    padding: 6%;
+}
+
+h3{
+    padding: 6% 0 0 6%;
+}
+
+.inner-text{
+    padding: 2% 0 0 6%;
+}
+
+@media (min-width: 700px){
+    .heading{
+        margin: 3.5% 5% 2% 5%;
+    }
+    h1{
+        margin: 0%;
+    }
+    .subhead{
+        margin-top: 1%;
+        width: 50%;
+    }
+    .team-builder{
+        display: flex;
+    }
+    .box{
+        width: 550px;
+        margin: 0%;
+    }
+    .boxes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3.5%;
+    }
+    img{
+        width: 13%;
+        padding-left: 15%;
+    }
+    .blank-space{
+        height: 20px;
+    }
 }
