@@ -128,6 +128,94 @@ footer{
     justify-content: space-evenly;
 }
 
+.sign-up{
+        height: 100vh;
+        padding: 0% 5%;
+        background-color: var(--primary-red);
+        background-image: url("images/bg-intro-desktop.png");
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 5%;
+        padding: 0 8%;
+    }
+    .top-text{
+        width: 50%;
+        margin-right: 4%;
+        padding-bottom: 5%;
+    }
+    .title{
+        font-weight: 700;
+        font-size: 3rem;
+        color: white;
+        margin-left: 8%;
+        width: 80%;
+    }
+    .sub-title{
+        color: white;
+        width: 80%;
+        margin: 3% 0 0 8.5%;
+    }
+    .bot-half{
+        width: 50%;
+        padding-bottom: 6%;
+    }
+    .purp-box{
+        background-color: var(--accent-purple);
+        text-align: center;
+        margin: 10% 0 3% 0;
+        padding: 3% 2%;
+        border-radius: 10px;
+        box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.158);
+        color: var(--neutral-white);
+        width: 85%;
+    }
+    .bold{
+        font-weight: 600;
+        color: white;
+    }
+    .white-box{
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.137);
+        padding: 5.5%;
+        width: 85%;
+    }
+    input[type=text],input[type=email],input[type=password]{
+        color: var(--neutral-grey);
+        font-weight: 700;
+        width: 100%;
+        padding: 4%;
+        margin: 2%;
+        border: .25px solid var(--neutral-white);
+        letter-spacing: .5px;
+    }
+    input[type=submit]{
+        color: white;
+        font-weight: 700;
+        background-color: var(--primary-green);
+        padding: 5% 16% 3% 16%;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 5px 0px hsl(154, 57%, 45%);
+        font-size: 1rem;
+        margin: 1% 0 1% 2%;
+        width: 100%;
+    }
+    .orange-clr{
+        color: var(--primary-red);
+        font-weight: 700;
+    }
+    .disclaim{
+        text-align: center;
+        margin: 2% 7% 0 0%;
+        width: 100%;
+        font-size: .9rem;
+        font-weight: 400;
+    }
+
 @media (max-width: 700px){
     .menu{
         display: flex;
@@ -192,49 +280,50 @@ footer{
     .sign-up{
         height: 100vh;
         padding: 20% 5%;
-        background-color: var(--primary-red);
-        background-image: url("images/bg-intro-desktop.png");
-        font-family: 'Poppins', sans-serif;
-        display: flex;
         flex-direction: column;
-        justify-content: start;
-        align-items: center;
+        margin-bottom: 5%;
+    }
+    .top-text{
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
     .title{
-        font-weight: 700;
         font-size: x-large;
         text-align: center;
         width: 85%;
-        color: white;
         margin-left: 8%;
     }
     .sub-title{
         text-align: center;
-        color: white;
         margin-top: 5%;
         padding: 0 3%;
     }
+    .bot-half{
+        width: 100%;
+        padding: 0 0 6% 0;
+    }
     .purp-box{
-        background-color: var(--accent-purple);
-        text-align: center;
         margin: 10% 0 6% 0;
         padding: 5% 15%;
-        border-radius: 10px;
-        box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.158);
-        color: var(--neutral-white);
-    }
-    .bold{
-        font-weight: 600;
-        color: white;
+        width: 100%;
     }
     .white-box{
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.137);
         padding: 7%;
+        width: 100%;
     }
-    input>::placeholder{
-        color: var(--neutral-grey);
-        font-weight: 600;
+    input[type=text],input[type=email],input[type=password]{
+        width: 100%;
+        padding: 5% 3%;
+        margin: 3% 0;
+    }
+    input[type=submit]{
+        padding: 7% 16% 5% 16%;
+        font-size: 1rem;
+        margin: 2% 0;
+    }
+    .disclaim{
+        text-align: center;
+        margin: 4% 7% 0 0%;
     }
 }
