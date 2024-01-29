@@ -204,6 +204,11 @@ footer{
         margin: 1% 0 1% 2%;
         width: 100%;
     }
+
+    input[type=submit]:hover{
+        background-color: hsl(154, 57%, 45%);
+    }
+    
     .orange-clr{
         color: var(--primary-red);
         font-weight: 700;
@@ -214,6 +219,7 @@ footer{
         width: 100%;
         font-size: .9rem;
         font-weight: 400;
+        color: var(--neutral-white);
     }
 
 @media (max-width: 700px){
@@ -279,7 +285,7 @@ footer{
     }
     .sign-up{
         height: 100vh;
-        padding: 20% 5%;
+        padding: 20% 5% 30% 5%;
         flex-direction: column;
         margin-bottom: 5%;
     }
