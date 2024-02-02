@@ -27,22 +27,26 @@
 
 
  
-
+.after{
+    width: fit-content;
+}
 .box2 {
     background-color: red;
     transition-property: width;
     transition-duration: 1s;
-    transition-delay: 1s; 
 }
     
 .box3 {
     background-color: blue;
     transition-property: width;
     transition-duration: 1s;
+    transition-delay: 1s; 
 }
 
-.box2:hover, .box3:hover{
-    width: 300px;
+.after:hover{
+    .box2, .box3{
+        width: 300px;
+    }
 }
 
 
@@ -51,9 +55,8 @@
 .boxes{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    padding: 0 40%;
-    border: 2px solid black;
+    width: 15%;
+    margin: 0 40%;
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -61,15 +64,11 @@
 
 .boxes>.box{
     margin: 0;
-}
-
-.p4:hover + .box4{
-    transition: 4s;
+    transition: transform 1s;
 }
 
 .box4 {
     background-color: red;
-    transform: rotateZ('90deg');
 }
 
 .box5 {
@@ -80,4 +79,25 @@
 }
 .box7 {
     background-color: green;
+}
+
+.boxes:hover{
+    .box4{
+        transform: translate(-80px) rotateZ(90deg) ;
+    }
+    .box6{
+        transform: translate(-80px) rotateZ(-90deg) 
+    }
+    .box5{
+        transform: translate(80px) rotatez(-90deg) 
+    }
+    .box7{
+        transform: translate(80px) rotatez(90deg) 
+    }
+}
+
+.reveal{
+    text-align: center;
+    font-size: xx-large;
+    padding: 4.5% 4% 1% 0;
 }
