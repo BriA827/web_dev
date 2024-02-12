@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    padding-top: 17%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    padding: 5% 4%;
+}
+
+.nav{
+    display: none;
+}
+
+.desktop-pic{
+    display: none;
+}
+
+.mobile-pic{
+    width: 100%;
+}
