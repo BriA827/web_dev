@@ -332,4 +332,19 @@ footer{
         text-align: center;
         margin: 4% 7% 0 0%;
     }
+
+    /* weather */
+    .weather-div{
+        padding: 20% 5% 8% 5%;
+        background-color: #0d5a7e;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        font-size: x-large;
+    }
+    .test{
+        font-size: 3rem;
+    }
 }
