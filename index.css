@@ -222,6 +222,37 @@ footer{
         color: var(--neutral-white);
     }
 
+    /* weather */
+    .weather-div{
+        position: fixed;
+        width: 20%;
+        top: 80px;
+        left: 5px;
+        padding: 1.5% 2% 1.5% 2%;
+        background-color: #0d5a7e;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: large;
+        border-radius: 15px;
+    }
+    .white-font{
+        color: white;
+    }
+    .w-left{
+        width: 30%;
+    }
+    .w-middle{
+        width: 23%;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .w-right{
+        width: 15%;
+    }
+
 @media (max-width: 700px){
     .menu{
         display: flex;
@@ -335,16 +366,11 @@ footer{
 
     /* weather */
     .weather-div{
-        padding: 20% 5% 8% 5%;
-        background-color: #0d5a7e;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        color: white;
-        font-size: x-large;
-    }
-    .test{
-        font-size: 3rem;
+        position: static;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 16% 2% 3% 2%;
     }
 }

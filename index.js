@@ -37,3 +37,39 @@ xBtn.addEventListener("click", () => {
 // jokeButton.addEventListener("click", () => {
 //     getJoke()
 // })
+
+
+
+// weather
+ const areaText = document.querySelector(".area")
+ const dateText = document.querySelector(".date")
+ const timeText = document.querySelector(".time")
+ const weatherImg = document.querySelector(".weather")
+ const degreesText = document.querySelector(".degrees")
+ const forcastText = document.querySelector(".forcast")
+
+const weaUrl = "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}"
+const weaKey = "3a1f074c41f58b8aa3606d340ed622bc"
+
+const dateObject = new Date()
+const month = dateObject.getMonth() + 1
+const date = dateObject.getDate()
+const fullYear = dateObject.getFullYear()
+let hour = dateObject.getHours()
+let minutes = dateObject.getMinutes()
+
+if (minutes < 10){
+    minutes = "0" + minutes.toString()
+}
+
+let xm = "AM"
+
+if (hour > 12){
+   xm = "PM"
+   hour = hour-12
+}
+
+let time = `${hour}:${minutes} ${xm}`
+timeText.textContent = time
+
+console.log(month, date, fullYear, hour, minutes, time)
