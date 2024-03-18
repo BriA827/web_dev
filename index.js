@@ -41,15 +41,15 @@ xBtn.addEventListener("click", () => {
 
 
 // weather
+const clouds = ['few clouds', 'scattered clouds', 'broken clouds']
+const rain = ['shower rain', 'rain', 'mist']
+
  const areaText = document.querySelector(".area")
  const dateText = document.querySelector(".date")
  const timeText = document.querySelector(".time")
  const weatherImg = document.querySelector(".weather")
  const degreesText = document.querySelector(".degrees")
  const forcastText = document.querySelector(".forcast")
-
-const weaUrl = "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}"
-const weaKey = "3a1f074c41f58b8aa3606d340ed622bc"
 
 const dateObject = new Date()
 const month = dateObject.getMonth() + 1
@@ -71,5 +71,49 @@ if (hour > 12){
 
 let time = `${hour}:${minutes} ${xm}`
 timeText.textContent = time
+let fullDate = `${month}/${date}/${fullYear}`
+dateText.textContent = fullDate
 
-console.log(month, date, fullYear, hour, minutes, time)
+let lat = 43.6591
+let lon = -70.2568
+const weaKey = "3a1f074c41f58b8aa3606d340ed622bc"
+let weaUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weaKey}&units=imperial`
+
+let weaImg
+
+async function getWeather() {
+    try {
+        const response = await fetch(weaUrl)
+        const data = await response.json()
+        degreesText.textContent = `${Math.round(data.main.temp)}°F`
+
+        let forcast = data.weather[0].description
+        forcastText.textContent = data.weather[0].main
+
+        if (clouds.includes(forcast)){
+            weaImg = "partly-cloudy"
+        }
+        else if (rain.includes(forcast)){
+            weaImg = "rain"
+        }
+        else if (forcast == 'thunderstorm'){
+            weaImg = "rain-storm"
+        }
+        else if (forcast == 'snow'){
+            weaImg = "snow"
+        }
+        else{
+            weaImg = 'sunny'
+        }
+
+        weatherImg.src = `images/${weaImg}.png`
+
+    }
+    catch (error) {
+        console.error(error)
+    }
+}
+
+getWeather()
+
+
