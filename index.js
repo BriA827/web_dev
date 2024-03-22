@@ -51,29 +51,6 @@ const rain = ['shower rain', 'rain', 'mist']
  const degreesText = document.querySelector(".degrees")
  const forcastText = document.querySelector(".forcast")
 
-const dateObject = new Date()
-const month = dateObject.getMonth() + 1
-const date = dateObject.getDate()
-const fullYear = dateObject.getFullYear()
-let hour = dateObject.getHours()
-let minutes = dateObject.getMinutes()
-
-if (minutes < 10){
-    minutes = "0" + minutes.toString()
-}
-
-let xm = "AM"
-
-if (hour > 12){
-   xm = "PM"
-   hour = hour-12
-}
-
-let time = `${hour}:${minutes} ${xm}`
-timeText.textContent = time
-let fullDate = `${month}/${date}/${fullYear}`
-dateText.textContent = fullDate
-
 let lat = 43.6591
 let lon = -70.2568
 const weaKey = "3a1f074c41f58b8aa3606d340ed622bc"
@@ -114,6 +91,61 @@ async function getWeather() {
     }
 }
 
+let city = "none"
+const locaKey = "276469db1268406a9a5a7b6ce6262505"
+let locaUrl = `https://api.geoapify.com/v1/ipinfo?apiKey=${locaKey}`
+
+async function getLocation(){
+    try {
+        const response2 = await fetch(locaUrl)
+        const data2 = await response2.json()
+
+        lat = data2.location.latitude
+        lon = data2.location.longitude
+        city = data2.city.name
+        areaText.textContent = `${data2.city.name}, ${data2.subdivisions[0].names.en}`
+    }
+    catch(error){
+        console.log(error)
+    }
+}
+
+const timeKey = "GMq/hJCT6BL3C2R8VrXXTg==f0E9aEQaDileMReq"
+let timeUrl = `https://api.api-ninjas.com/v1/worldtime?lat=${lat}&lon=${lon}`
+const options = {
+    method: 'GET',
+    headers: {
+        'X-Api-Key': timeKey
+    }
+}
+
+async function fixTime(){
+    try{
+        const response3 = await fetch(timeUrl, options)
+        const data3 = await response3.json()
+        const hour = data3.hour
+        const minutes = data3.minute
+        const month = data3.month
+        const date = data3.day
+        const fullYear = data3.year
+
+        let xm = "AM"
+
+        if (hour > 12){
+            hour = hour - 12
+            xm = "PM"
+        }
+
+        let time = `${hour}:${minutes} ${xm}`
+        timeText.textContent = time
+        let fullDate = `${month}/${date}/${fullYear}`
+        dateText.textContent = fullDate
+    }
+    catch(error){
+        console.log(error)
+    }
+}
+
+fixTime()
+getLocation()
 getWeather()
-
-
