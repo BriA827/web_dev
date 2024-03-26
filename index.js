@@ -42,7 +42,7 @@ xBtn.addEventListener("click", () => {
 
 // weather
 const clouds = ['few clouds', 'scattered clouds', 'broken clouds']
-const rain = ['shower rain', 'rain', 'mist']
+const rain = ['shower rain', 'rain', 'mist', 'light rain', 'moderate rain']
 
  const areaText = document.querySelector(".area")
  const dateText = document.querySelector(".date")
