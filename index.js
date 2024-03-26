@@ -146,6 +146,6 @@ async function fixTime(){
     }
 }
 
-fixTime()
 getLocation()
 getWeather()
+fixTime()
