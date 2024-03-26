@@ -51,14 +51,13 @@ const rain = ['shower rain', 'rain', 'mist']
  const degreesText = document.querySelector(".degrees")
  const forcastText = document.querySelector(".forcast")
 
-let lat = 43.6591
-let lon = -70.2568
-const weaKey = "3a1f074c41f58b8aa3606d340ed622bc"
-let weaUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weaKey}&units=imperial`
-
 let weaImg
 
-async function getWeather() {
+async function getWeather(coords) {
+    const la = coords[0]
+    const lo = coords[1]
+    const weaKey = "3a1f074c41f58b8aa3606d340ed622bc"
+    let weaUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${la}&lon=${lo}&appid=${weaKey}&units=imperial`
     try {
         const response = await fetch(weaUrl)
         const data = await response.json()
@@ -91,35 +90,37 @@ async function getWeather() {
     }
 }
 
-let city = "none"
-const locaKey = "276469db1268406a9a5a7b6ce6262505"
-let locaUrl = `https://api.geoapify.com/v1/ipinfo?apiKey=${locaKey}`
-
 async function getLocation(){
+    const locaKey = "276469db1268406a9a5a7b6ce6262505"
+    let locaUrl = `https://api.geoapify.com/v1/ipinfo?apiKey=${locaKey}`
     try {
         const response2 = await fetch(locaUrl)
         const data2 = await response2.json()
 
-        lat = data2.location.latitude
-        lon = data2.location.longitude
+        const lat = data2.location.latitude
+        const lon = data2.location.longitude
+        const coords = [lat, lon]
         city = data2.city.name
         areaText.textContent = `${data2.city.name}, ${data2.subdivisions[0].names.en}`
+        return coords
     }
     catch(error){
         console.log(error)
     }
 }
 
-const timeKey = "GMq/hJCT6BL3C2R8VrXXTg==f0E9aEQaDileMReq"
-let timeUrl = `https://api.api-ninjas.com/v1/worldtime?lat=${lat}&lon=${lon}`
-const options = {
-    method: 'GET',
-    headers: {
-        'X-Api-Key': timeKey
-    }
-}
 
-async function fixTime(){
+async function fixTime(coords){
+    const la = coords[0]
+    const lo = coords[1]
+    const timeKey = "GMq/hJCT6BL3C2R8VrXXTg==f0E9aEQaDileMReq"
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-Api-Key': timeKey
+        }
+    }
+    let timeUrl = `https://api.api-ninjas.com/v1/worldtime?lat=${la}&lon=${lo}`
     try{
         const response3 = await fetch(timeUrl, options)
         const data3 = await response3.json()
@@ -131,9 +132,11 @@ async function fixTime(){
 
         let xm = "AM"
 
+        if (hour > 11){
+            xm = "PM"
+        }
         if (hour > 12){
             hour = hour - 12
-            xm = "PM"
         }
 
         let time = `${hour}:${minutes} ${xm}`
@@ -146,6 +149,4 @@ async function fixTime(){
     }
 }
 
-getLocation()
-getWeather()
-fixTime()
+getLocation().then(c => {getWeather(c), fixTime(c)})
